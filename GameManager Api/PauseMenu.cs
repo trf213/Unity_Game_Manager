@@ -5,31 +5,42 @@ using UnityEngine;
 public  class PauseMenu : MonoBehaviour
 {
     private bool ispaused;
-    
+    public GameObject pauseMenuScreen;
+    public GameObject settingsScreen;
+    private sceneManager scenemanger;
     public  void Pause()
     {
-        //tabs
+        ispaused = true;
+        Time.timeScale = 0f;
+        pauseMenuScreen.SetActive(true);
     }
-    public  void Resume()
+    public  void Resume(int val)
     {
-        //tabs
+        ispaused = false;
+        StartCoroutine(Timer(val));
+        pauseMenuScreen.SetActive(false);
+        Time.timeScale = 1f;
+        
 
     }
     
     public  void Quit()
     {
-        //tabs
+       Application.Quit();
     }
-    public void LevelSelect()
+    public void LevelSelect(int index)
         {
-            Debug.Log("Define this method if needed ");
+           scenemanger.LevelLoad(index);
         }
     public void settings()
         {
-            Debug.Log("Define this method if needed ");
+           settingsScreen.SetActive(true);
         }
 
-
+public bool getIspaused()
+{
+    return ispaused;
+}
 
 public void countDown(int val)
 {

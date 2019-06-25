@@ -109,7 +109,7 @@ public class ScoreManager : MonoBehaviour
 }
 
 
-public void loadDAta()
+public void loadData()
 {
   ScoreData data = SaveSystem.LoadScore();
    levelScore = data.levelScore;// score with in a level

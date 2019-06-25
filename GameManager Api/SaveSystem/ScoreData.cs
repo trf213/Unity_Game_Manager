@@ -19,14 +19,5 @@ public class ScoreData
       coins = SC.getCoins();
   }
 
-public void saveData()
-{
 
-}
-
-
-public void loadDAta()
-{
-    
-}
 }

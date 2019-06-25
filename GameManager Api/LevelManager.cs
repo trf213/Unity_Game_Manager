@@ -9,7 +9,7 @@ public abstract class LevelManager : MonoBehaviour
     private bool isLevelCompleted;
     private int enemyCount;
     private bool isPlayerDead;
-    private GameObject player;
+  
     private float inGameTime;
 
 
@@ -23,5 +23,8 @@ public abstract class LevelManager : MonoBehaviour
 
 
     private sceneManager sceneLoader;
+
+    private Player player;
      
+     //Wave Spawner
 }
